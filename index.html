@@ -8,18 +8,24 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
+  <div id="preloader">
+  <div class="loader-text">🚀 Launching...</div>
+</div>
+
   <header>
   <nav class="navbar">
-    <h1 class="logo">Yashwanth KR</h1>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <a href="#about">About Me</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 </header>
 
   <header>
@@ -28,24 +34,31 @@
   </header>
 
   <section id="about" class="about">
-    <h2>About Me</h2>
+    <div data-aos="fade-left">
+    <h2 data-aos="fade-up">About Me</h2>
     <p>I’ve just completed Class 12 and am beginning my journey in B.Tech (Engineering) in India. I recently started learning coding and have always been fascinated by the universe 🌌. I love traveling, editing photos & videos (just for fun!), and I’m a proud selenophile 🌕.</p>
+    </div>
   </section>
 
   <section id="skills" class="skills">
+    <div data-aos="fade-left">
     <h2>Skills</h2>
     <ul>
       <li>Python (Basics + Modules)</li>
       <li>SQL (NCERT Level)</li>
       <li>Photo & Video Editing (Non-professional)</li>
     </ul>
+    </div>
   </section>
 
   <section id="projects" class="projects">
+    <div data-aos="fade-left">
     <h2>Projects</h2>
     <p>I’ve worked with hardware like Arduino in school-level competitions. I’m excited to start new and challenging tech projects in college!</p>
+    </div>
   </section>
 <section id="projects" class="projects">
+  <div data-aos="fade-left">
   <h2>Projects</h2>
   <div class="project-cards">
     <div class="card">
@@ -66,9 +79,11 @@
       <p>Currently learning HTML, CSS, and building this portfolio site. More coding + AI + web projects will be added soon!</p>
     </div>
   </div>
+  </div>
 </section>
 
 <section id="contact" class="contact">
+  <div data-aos="fade-left">
   <h2>Contact</h2>
   <div class="contact-links">
     <a href="mailto:yash2006kr@gmail.com" target="_blank">
@@ -87,16 +102,33 @@
       <i class="fab fa-instagram"></i> @yashwanth._.k._.r
     </a>
   </div>
+  </div>
 </section>
 
 
-  <section class="resume">
-    <h2>Resume</h2>
-    <p><a href="assets/resume.pdf" download>Download Resume (PDF)</a></p>
-  </section>
+  <section id="resume">
+  <div data-aos="fade-left">
+  <h2>Resume</h2>
+  <p>You can view or download my resume below:</p>
+  <a href="resume.pdf" download class="resume-btn" target="_blank">📄 View / Download Resume</a>
+  </div>
+</section>
+
 
   <footer>
     <p>&copy; 2025 Yashwanth K R. All rights reserved.</p>
   </footer>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.style.display = "none";
+  });
+</script>
+<!-- AOS Animation JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
