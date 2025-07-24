@@ -140,7 +140,7 @@ footer {
   text-align: center;
   margin: 60px 0 20px;
   font-size: 0.9em;
-  color: #777;
+  color: #ffffff;
 }
 
 /* --- Contact Section --- */
@@ -265,4 +265,87 @@ body {
 }
 body.dark-theme {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+#blog {
+  margin-top: 2rem;
+}
+
+.blog-list {
+  list-style: none;
+  padding: 0;
+}
+
+.blog-list li {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-list a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.blog-list a:hover {
+  text-decoration: underline;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: gray;
+}
+#blog .card {
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.blog-list {
+  list-style: none;
+  padding: 0;
+}
+
+.blog-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.blog-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.blog-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.blog-date {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  background-color: #00bfff;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0099cc;
 }

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My First Steps into Coding</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    /* Blog page container */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Headings and spacing */
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Code blocks */
+pre {
+  background-color: #1e1e1e;
+  color: #00ff99;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: monospace;
+  margin: 1.5rem 0;
+}
+
+pre code {
+  font-size: 0.95rem;
+}
+
+/* Image styling */
+.container img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 1rem 0;
+  display: block;
+}
+
+/* Button styling */
+.container button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+  background-color: #0055cc;
+}
+
+/* Light theme override (if needed) */
+body:not(.dark-theme) pre {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+body:not(.dark-theme) .container button {
+  background-color: #222;
+  color: #fff;
+}
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+    }
+
+    pre {
+      background-color: #222;
+      color: #0f0;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body class="dark-theme">
+  <div class="container">
+    <h1>💻 My First Steps into Coding</h1>
+    <p><strong>Date:</strong> July 15, 2025</p>
+
+    <p>
+      My journey began with a simple "Hello, World!" — and I remember the thrill of seeing it print for the first time.
+    </p>
+
+    <pre><code>
+# My first Python program
+print("Hello, world!")
+    </code></pre>
+
+    <p>
+      I started with Python because it's beginner-friendly and lets you build cool stuff with minimal code. I soon moved on to small projects like calculators and basic games using the `turtle` module.
+    </p>
+
+    <img src="../images/first-code-screenshot.png" alt="First Python code screenshot" />
+
+    <p>
+      Here's a simple number guessing game I made early on:
+    </p>
+
+    <pre><code>
+import random
+
+number = random.randint(1, 10)
+guess = int(input("Guess a number (1-10): "))
+
+if guess == number:
+    print("🎉 You guessed it!")
+else:
+    print(f"Oops! The number was {number}")
+    </code></pre>
+
+    <p>
+      It was buggy at first, but fixing those bugs is how I really learned to debug and understand logic.
+    </p>
+
+    <button onclick="window.location.href='../index.html'">🏠 Back to Home</button>
+  </div>
+</body>
+</html>
