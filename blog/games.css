@@ -1,0 +1,75 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #0d0d0d;
+  color: #e6edf3;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(90deg, #00111a, #001f33);
+  border-bottom: 2px solid #00ffcc;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00ffaa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.game {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00ffcc;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+.game h2 {
+  color: #00ffaa;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #00ffcc;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  background: #00ffaa;
+  box-shadow: 0 0 15px #00ffaa;
+}
