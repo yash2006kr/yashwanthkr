@@ -29,6 +29,41 @@
         #instructions li {
         margin: 5px 0;
         }
+    #start-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      color: yellow;
+      font-family: "Courier New", monospace;
+      text-align: center;
+    }
+
+    #start-screen h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px red, 0 0 20px orange;
+    }
+
+    #start-screen p {
+      font-size: 1.5rem;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    #gameCanvas {
+      display: none; /* Hide canvas until game starts */
+    }
 
     body {
       margin: 0;
@@ -76,8 +111,11 @@
     <li>💔 You have <b>3 lives</b> – avoid ghosts when not powered up</li>
     <li>🚀 Clear all pellets to advance to the next level</li>
   </ul>
-</div>
-
+  </div>
+  <div id="start-screen">
+    <h1>👾 Pac-Man</h1>
+    <p>Press <b>SPACE</b> to Start</p>
+  </div>
   <canvas id="gameCanvas" width="448" height="496"></canvas>
   <br>
   <a href="../index.html" class="btn">⬅ Back to Blog</a>
@@ -304,15 +342,23 @@
       if (Math.random() < 0.002) spawnFruit();
     }
 
-    document.addEventListener("keydown", e => {
-      if (e.key === "ArrowUp") { pacman.dirX = 0; pacman.dirY = -1; }
-      if (e.key === "ArrowDown") { pacman.dirX = 0; pacman.dirY = 1; }
-      if (e.key === "ArrowLeft") { pacman.dirX = -1; pacman.dirY = 0; }
-      if (e.key === "ArrowRight") { pacman.dirX = 1; pacman.dirY = 0; }
+    let gameStarted = false;
+    document.addEventListener("keydown", function(e) {
+      if (!gameStarted && e.code === "Space") {
+        document.getElementById("start-screen").style.display = "none";
+        canvas.style.display = "block";
+        gameStarted = true;
+        loop = setInterval(gameLoop, gameSpeed);
+      }
+      if (gameStarted) {
+        if (e.key === "ArrowUp") { pacman.dirX = 0; pacman.dirY = -1; }
+        if (e.key === "ArrowDown") { pacman.dirX = 0; pacman.dirY = 1; }
+        if (e.key === "ArrowLeft") { pacman.dirX = -1; pacman.dirY = 0; }
+        if (e.key === "ArrowRight") { pacman.dirX = 1; pacman.dirY = 0; }
+      }
     });
 
     updateHUD();
-    let loop = setInterval(gameLoop, gameSpeed);
   </script>
 </body>
 </html>
