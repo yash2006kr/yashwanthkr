@@ -385,3 +385,44 @@ button:hover {
   font-weight: bold;
   font-family: "Courier New", monospace;
 }
+#weather-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 9999;
+  color: var(--text-color);
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+#weather-btn:hover {
+  transform: scale(1.2);
+  color: #1db954; /* greenish highlight */
+}
+button[title] {
+  position: relative;
+}
+
+button[title]::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+button[title]:hover::after {
+  opacity: 1;
+}

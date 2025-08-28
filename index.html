@@ -18,8 +18,11 @@
   <div class="loader-text">🚀 Launching...</div>
 </div>
 
-  <header>
-  <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+<header>
+  <!-- Weather Updates Button -->
+  <button id="weather-btn" aria-label="Weather Updates" title="View Live Weather on Zoom Earth">⛅</button>
+  <!-- Dark Mode Toggle -->
+  <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark / Light Mode">🌙</button>
   <nav class="navbar">
   <a href="#about">About Me</a>
   <a href="#skills">Skills</a>
@@ -173,6 +176,14 @@ toggleBtn.addEventListener('click', () => {
 });
 
 </script>
+<script>
+  // Weather button redirect
+  const weatherBtn = document.getElementById('weather-btn');
+  weatherBtn.addEventListener('click', () => {
+    window.open("https://zoom.earth/#view=0,0,2,live", "_blank");
+  });
+</script>
+
 <!-- AOS Animation JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
