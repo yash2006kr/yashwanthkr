@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/png" href="./favicon.jpg"> 
-  <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -17,9 +16,8 @@
   </div>
 
   <header>
-    <!-- Weather Updates Button -->
     <button id="weather-btn" aria-label="Weather Updates" title="View Live Weather on Zoom Earth">⛅</button>
-    <!-- Dark Mode Toggle -->
+    <button id="stellarium-btn" aria-label="Stellarium" title="Explore Sky on Stellarium">🌌</button>
     <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark / Light Mode">🌙</button>
     <nav class="navbar">
       <a href="#about">About Me</a>
@@ -31,160 +29,100 @@
     <p>Engineering student, budding coder & astronomy lover.</p>
   </header>
 
-  <section id="about" class="about">
-    <div data-aos="fade-left">
-      <h2 data-aos="fade-up">About Me</h2>
-      <p>I’ve just completed Class 12 and am beginning my journey in B.Tech (Engineering) in India. I recently started learning coding and have always been fascinated by the universe 🌌. I love traveling, editing photos & videos (just for fun!), and I’m a proud selenophile 🌕.</p>
-    </div>
-  </section>
+  <main>
+    <section id="about" class="about">
+      <div data-aos="fade-left">
+        <h2 data-aos="fade-up">About Me</h2>
+        <p>I’ve just completed Class 12 and am beginning my journey in B.Tech (Engineering) in India. I recently started learning coding and have always been fascinated by the universe 🌌. I love traveling, editing photos & videos (just for fun!), and I’m a proud selenophile 🌕.</p>
+      </div>
+    </section>
 
-  <section id="skills" class="skills">
-    <div data-aos="fade-left">
-      <h2>Skills</h2>
-      <ul>
-        <li>Python</li>
-        <li>MYSQL</li>
-        <li>C,C++ (learning...)</li>
-        <li>Photo & Video Editing (Non-professional)</li>
-      </ul>
-    </div>
-  </section>
+    <section id="skills" class="skills">
+      <div data-aos="fade-left">
+        <h2>Skills</h2>
+        <ul>
+          <li>Python</li>
+          <li>MYSQL</li>
+          <li>C,C++ (learning...)</li>
+          <li>Photo & Video Editing (Non-professional)</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="projects" class="projects">
-    <div data-aos="fade-left">
-      <h2>Projects</h2>
-      <p>I’ve worked with hardware like Arduino in school-level competitions. I’m excited to start new and challenging tech projects in college!</p>
-      <div class="project-cards">
-        <div class="card">
-          <h3>Space Rover Prototype</h3>
-          <p>Designed and built a Mars Rover-style vehicle using Arduino, Bluetooth module, and motor driver. Presented at a school-level hackathon.</p>
-          <div class="video-container">
-            <iframe 
-              src="https://www.youtube.com/embed/7dxOiA9YOzQ" 
-              title="Space Rover Project"
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
+    <section id="projects" class="projects">
+      <div data-aos="fade-left">
+        <h2>Projects</h2>
+        <p>I’ve worked with hardware like Arduino in school-level competitions. I’m excited to start new and challenging tech projects in college!</p>
+        <div class="project-cards">
+          <div class="card">
+            <h3>Space Rover Prototype</h3>
+            <p>Designed and built a Mars Rover-style vehicle using Arduino, Bluetooth module, and motor driver. Presented at a school-level hackathon.</p>
+            <div class="video-container">
+              <iframe 
+                src="https://www.youtube.com/embed/7dxOiA9YOzQ" 
+                title="Space Rover Project"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+          <div class="card coming-soon">
+            <h3>More Coming Soon...</h3>
           </div>
         </div>
-        <div class="card coming-soon">
-          <h3>More Coming Soon...</h3>
+      </div>
+    </section>
+
+    <section id="blog">
+      <div class="card">
+        <h2>📚 Blog Posts</h2>
+        <ul class="blog-list">
+          <li class="blog-item">
+            <a href="blog/maze-blog.html" class="blog-link" target="_blank">🧩 Maze Game</a>
+            <span class="blog-date">July 23, 2025</span>
+          </li>
+          <li class="blog-item">
+            <a href="blog/games-blog.html" class="blog-link" target="_blank">🎮 Terminal Games Collection</a>
+            <span class="blog-date">August 18, 2025</span>
+          </li>
+          <li class="blog-item">
+            <a href="blog/pacman.html" class="blog-link" target="_blank">👾 Pacman Game</a>
+            <span class="blog-date">August 27, 2025</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div data-aos="fade-left">
+        <h2>Contact</h2>
+        <div class="contact-links">
+          <a href="mailto:yash2006kr@gmail.com" target="_blank"><i class="fas fa-envelope"></i> yash2006kr@gmail.com</a>
+          <a href="mailto:yash2006kr@outlook.com" target="_blank"><i class="fas fa-envelope"></i> yash2006kr@outlook.com</a>
+          <a href="https://github.com/yash2006kr" target="_blank"><i class="fab fa-github"></i> @yash2006kr</a>
+          <a href="https://x.com/yash2006kr" target="_blank"><i class="fab fa-x-twitter"></i> @yash2006kr</a>
+          <a href="https://instagram.com/yash2006kr" target="_blank"><i class="fab fa-instagram"></i> @yash2006kr</a>
+          <a href="https://discord.com/users/yash2006kr" target="_blank"><i class="fab fa-discord"></i> yash2006kr</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="blog">
-    <div class="card">
-      <h2>📚 Blog Posts</h2>
-      <ul class="blog-list">
-        <li class="blog-item">
-          <a href="blog/maze-blog.html" class="blog-link" target="_blank">🧩 Maze Game</a>
-          <span class="blog-date">July 23, 2025</span>
-        </li>
-        <li class="blog-item">
-          <a href="blog/games-blog.html" class="blog-link" target="_blank">🎮 Terminal Games Collection</a>
-          <span class="blog-date">August 18, 2025</span>
-        </li>
-        <li class="blog-item">
-          <a href="blog/pacman.html" class="blog-link" target="_blank">👾 Pacman Game</a>
-          <span class="blog-date">August 27, 2025</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div data-aos="fade-left">
-      <h2>Contact</h2>
-      <div class="contact-links">
-        <a href="mailto:yash2006kr@gmail.com" target="_blank">
-          <i class="fas fa-envelope"></i> yash2006kr@gmail.com
-        </a>
-        <a href="mailto:yash2006kr@outlook.com" target="_blank">
-          <i class="fas fa-envelope"></i> yash2006kr@outlook.com
-        </a>
-        <a href="https://github.com/yash2006kr" target="_blank">
-          <i class="fab fa-github"></i> @yash2006kr
-        </a>
-        <a href="https://x.com/yash2006kr" target="_blank">
-          <i class="fab fa-x-twitter"></i> @yash2006kr
-        </a>
-        <a href="https://instagram.com/yash2006kr" target="_blank">
-          <i class="fab fa-instagram"></i> @yash2006kr
-        </a>
-        <a href="https://discord.com/users/yash2006kr" target="_blank">
-          <i class="fab fa-discord"></i> yash2006kr
-        </a>
-
+    <section id="resume">
+      <div data-aos="fade-left">
+        <h2>Resume</h2>
+        <p>You can view or download my resume below:</p>
+        <a href="resume.pdf" download class="resume-btn" target="_blank">📄 View / Download Resume</a>
       </div>
-    </div>
-  </section>
-
-  <section id="resume">
-    <div data-aos="fade-left">
-      <h2>Resume</h2>
-      <p>You can view or download my resume below:</p>
-      <a href="resume.pdf" download class="resume-btn" target="_blank">📄 View / Download Resume</a>
-    </div>
-  </section>
-
+    </section>
+  </main>
+  
   <footer>
     <p>&copy; 2025 Yashwanth K R. All rights reserved.</p>
     <p id="visitor-counter">👀 Visitors: <span id="visits">Loading...</span></p>
   </footer>
 
-  <!-- Visitor Counter -->
-  <script>
-    window.onload = function() {
-      fetch('https://api.countapi.xyz/hit/yash2006kr.github.io/yashwanthkr.github.io')
-        .then(response => response.json())
-        .then(data => {
-          document.getElementById('visits').innerText = data.value;
-        })
-        .catch(err => {
-          console.error("Visitor counter error:", err);
-          document.getElementById('visits').innerText = "Unavailable";
-        });
-    }
-  </script>
-
-  <!-- Preloader + Dark Theme -->
-  <script>
-    window.addEventListener("load", () => {
-      const preloader = document.getElementById("preloader");
-      preloader.style.display = "none";
-    });
-    const toggleBtn = document.getElementById('theme-toggle');
-    const body = document.body;
-
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      body.classList.add('dark-theme');
-      toggleBtn.textContent = '☀️';
-    }
-
-    toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('dark-theme');
-      const isDark = body.classList.contains('dark-theme');
-      toggleBtn.textContent = isDark ? '☀️' : '🌙';
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
-  </script>
-
-  <!-- Weather Button -->
-  <script>
-    const weatherBtn = document.getElementById('weather-btn');
-    weatherBtn.addEventListener('click', () => {
-      window.open("https://zoom.earth/#view=0,0,2,live", "_blank");
-    });
-  </script>
-
-  <!-- AOS Animation JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
