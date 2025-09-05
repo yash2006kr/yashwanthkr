@@ -4,7 +4,7 @@ Welcome to my personal portfolio website! 🚀
 This is where I showcase my journey as a student, budding coder, and astronomy lover 🌌.  
 
 🔗 **Live Website**: [yash2006kr.github.io/yashwanthkr.github.io](https://yash2006kr.github.io/yashwanthkr.github.io/)  
-
+NOTE : "This website is completely built using AI"
 ---
 
 ## ✨ Features
