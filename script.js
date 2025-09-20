@@ -1,4 +1,31 @@
-// Function to run when the page is fully loaded
+// A modern way to fetch the visitor count using async/await
+async function updateVisitorCount() {
+  const apiUrl = 'https://api.countapi.xyz/hit/yash2006kr.github.io';
+  const visitsElement = document.getElementById('visits');
+
+  try {
+    // 1. Await the response from the API
+    const response = await fetch(apiUrl);
+    
+    // 2. Check if the request was successful
+    if (!response.ok) {
+      throw new Error(`Network response was not ok: ${response.statusText}`);
+    }
+
+    // 3. Await the JSON data from the response
+    const data = await response.json();
+
+    // 4. Update the page with the count
+    visitsElement.innerText = data.value;
+
+  } catch (error) {
+    // 5. If anything goes wrong, catch the error
+    console.error("Visitor counter error:", error);
+    visitsElement.innerText = "Unavailable";
+  }
+}
+
+// Your existing function to run when the page is fully loaded
 function onPageLoad() {
   // Hide preloader
   const preloader = document.getElementById("preloader");
@@ -7,16 +34,8 @@ function onPageLoad() {
   // Initialize AOS animations
   AOS.init();
 
-  // Fetch visitor count
-  fetch('https://api.countapi.xyz/hit/yash2006kr.github.io/yashwanthkr.github.io')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('visits').innerText = data.value;
-    })
-    .catch(err => {
-      console.error("Visitor counter error:", err);
-      document.getElementById('visits').innerText = "Unavailable";
-    });
+  // Call the new function to get the visitor count
+  updateVisitorCount(); 
 }
 
 // Run the function after the page loads
