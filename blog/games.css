@@ -1,6 +1,7 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #0d0d0d;
+  background: url('https://wallpapers.com/images/hd/4k-space-background-4v1sv1hbmbn8wmim.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #e6edf3;
   margin: 0;
   padding: 0;
@@ -10,21 +11,25 @@ body {
 header {
   text-align: center;
   padding: 30px;
-  background: linear-gradient(90deg, #00111a, #001f33);
-  border-bottom: 2px solid #00ffcc;
+  background: rgba(0, 17, 26, 0.8);
+  border-bottom: 2px solid #00ffff;
 }
 
 header h1 {
   margin: 0;
   font-size: 2.5rem;
-  color: #00ffcc;
-  text-shadow: 0 0 10px #00ffcc;
+  color: #00ffff;
+  transition: text-shadow 0.3s ease;
+}
+
+header h1:hover {
+  text-shadow: 0 0 10px #00ffff;
 }
 
 .back-link {
   display: inline-block;
   margin-top: 10px;
-  color: #00ffaa;
+  color: #00ffff;
   text-decoration: none;
   font-weight: bold;
 }
@@ -40,8 +45,8 @@ main {
 }
 
 .game {
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid #00ffcc;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid #00ffff;
   border-radius: 12px;
   padding: 20px;
   margin: 20px 0;
@@ -50,18 +55,18 @@ main {
 
 .game:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 20px #00ffcc;
+  box-shadow: 0 0 20px #00ffff;
 }
 
 .game h2 {
-  color: #00ffaa;
+  color: #00ffff;
 }
 
 .btn {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background: #00ffcc;
+  background: #00ffff;
   color: #000;
   text-decoration: none;
   font-weight: bold;
@@ -70,6 +75,6 @@ main {
 }
 
 .btn:hover {
-  background: #00ffaa;
-  box-shadow: 0 0 15px #00ffaa;
+  background: #00ffff;
+  box-shadow: 0 0 15px #00ffff;
 }

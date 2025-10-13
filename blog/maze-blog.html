@@ -34,7 +34,6 @@
 <body>
   <h1>🧩 Maze Game</h1>
   <canvas id="mazeCanvas" width="500" height="500"></canvas>
-  <!-- ...previous content... -->
 
   <div id="status">Use arrow keys to move</div>
 
@@ -42,27 +41,6 @@
     <button onclick="generateNewMaze()">🔁 New Maze</button>
     <button onclick="window.location.href='../index.html'">🏠 Back to Home</button>
   </div>
-
-<!-- Place just before the closing </body> -->
-<script>
-  // Wrap everything in a function to regenerate maze
-  function generateNewMaze() {
-    // Reset
-    grid = [];
-    stack = [];
-    for (let y = 0; y < rows; y++) {
-      for (let x = 0; x < cols; x++) {
-        grid.push(new Cell(x, y));
-      }
-    }
-    current = grid[0];
-    player = { ...start };
-    document.getElementById("status").textContent = "Use arrow keys to move";
-    generateMaze();
-  }
-</script>
-
-  <div id="status">Use arrow keys to move</div>
 
   <script>
     const canvas = document.getElementById("mazeCanvas");
@@ -206,6 +184,22 @@
     const start = { x: 0, y: 0 };
     const end = { x: cols - 1, y: rows - 1 };
     let player = { ...start };
+
+    // Wrap everything in a function to regenerate maze
+    function generateNewMaze() {
+      // Reset
+      grid = [];
+      stack = [];
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          grid.push(new Cell(x, y));
+        }
+      }
+      current = grid[0];
+      player = { ...start };
+      document.getElementById("status").textContent = "Use arrow keys to move";
+      generateMaze();
+    }
 
     // Movement
     document.addEventListener("keydown", (e) => {
