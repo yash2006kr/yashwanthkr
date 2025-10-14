@@ -1,28 +1,10 @@
-// A modern way to fetch the visitor count using async/await
-async function updateVisitorCount() {
-  const apiUrl = 'https://api.countapi.xyz/hit/yash2006kr.github.io';
+// Local storage-based visitor counter that increments on each page load
+function updateVisitorCount() {
   const visitsElement = document.getElementById('visits');
-
-  try {
-    // 1. Await the response from the API
-    const response = await fetch(apiUrl);
-    
-    // 2. Check if the request was successful
-    if (!response.ok) {
-      throw new Error(`Network response was not ok: ${response.statusText}`);
-    }
-
-    // 3. Await the JSON data from the response
-    const data = await response.json();
-
-    // 4. Update the page with the count
-    visitsElement.innerText = data.value;
-
-  } catch (error) {
-    // 5. If anything goes wrong, catch the error
-    console.error("Visitor counter error:", error);
-    visitsElement.innerText = "Unavailable";
-  }
+  let count = localStorage.getItem('visitorCount') || 0;
+  count = parseInt(count) + 1;
+  localStorage.setItem('visitorCount', count);
+  visitsElement.innerText = count;
 }
 
 // Your existing function to run when the page is fully loaded

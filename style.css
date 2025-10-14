@@ -353,8 +353,13 @@ button:hover {
   margin-top: 10px;
   font-size: 1rem;
   font-family: "Fira Code", monospace;
-  color: #00ffcc;
-  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+  color: #000000; /* Dark color for light mode */
+  text-shadow: 0 0 5px #1f2020, 0 0 10px #1f2020;
+}
+
+.dark-theme #visitor-counter {
+  color: #00ffff;
+  text-shadow: 0 0 5px #222a2a, 0 0 10px #222a2a;
   animation: glow 2s ease-in-out infinite alternate;
 }
 
