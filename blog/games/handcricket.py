@@ -1,5 +1,5 @@
 #me building hand cricket game
-print('''Hand Cricket Game built by KR
+print('''The OG Hand Cricket Game
 
 ''')
 p1=input("Player 1 name: ")

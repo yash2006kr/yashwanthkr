@@ -11,7 +11,6 @@ print('| 7| 8| 9|')
 print(' -- -- --')
 
 board = [" "] * 9
-positions_taken = set()
 
 p1 = input("Who will play for 'X': ")
 p2 = input("Who will play for 'O' : ")
@@ -37,52 +36,27 @@ def check_win(mark):
     return False
 
 print("\nLet's Gooo....\n")
-turn = 0
-while turn < 9:
-    # Player 1
+current_player = 'X'
+players = {'X': p1, 'O': p2}
+for turn in range(9):
+    player = players[current_player]
     while True:
         try:
-            a = int(input(f"{p1} Enter the position (1-9): "))
-            if a < 1 or a > 9:
+            pos = int(input(f"{player} Enter the position (1-9): "))
+            if pos < 1 or pos > 9:
                 print("Max position is 9 bruh!")
                 continue
-            if a in positions_taken:
+            if board[pos-1] != " ":
                 print("Position is already entered")
                 continue
-            board[a-1] = 'X'
-            positions_taken.add(a)
+            board[pos-1] = current_player
             break
         except ValueError:
             print("Enter a valid number!")
     print_board()
-    if check_win('X'):
-        print(f"{p1} won the game, better luck next time {p2}")
+    if check_win(current_player):
+        print(f"{player} won the game, better luck next time {players['O' if current_player == 'X' else 'X']}")
         break
-    turn += 1
-    if turn == 9:
-        print("It's a draw!")
-        break
-
-    # Player 2
-    while True:
-        try:
-            b = int(input(f"{p2} Enter the position (1-9): "))
-            if b < 1 or b > 9:
-                print("Max position is 9 bruh!")
-                continue
-            if b in positions_taken:
-                print("Position is already entered")
-                continue
-            board[b-1] = 'O'
-            positions_taken.add(b)
-            break
-        except ValueError:
-            print("Enter a valid number!")
-    print_board()
-    if check_win('O'):
-        print(f"{p2} won the game, better luck next time {p1}")
-        break
-    turn += 1
-    if turn == 9:
-        print("It's a draw!")
-        break
+    current_player = 'O' if current_player == 'X' else 'X'
+else:
+    print("It's a draw!")
