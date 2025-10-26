@@ -12,36 +12,18 @@
 Welcome to my personal portfolio website! 🚀  
 This is where I showcase my journey as a student, budding coder, and astronomy lover 🌌.  
 
-🔗 **Live Website**: [yash2006kr.github.io/yashwanthkr.github.io](https://yash2006kr.github.io/yashwanthkr.github.io/)  
-NOTE : "This website is completely built using AI"
+🔗 **Live Website**: [yash2006kr.github.io/yashwanthkr](https://yash2006kr.github.io/yashwanthkr/)  
 ---
-
-<div align="center">
-  <a href="https://github.com/yash2006kr" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-  <a href="https://www.linkedin.com/in/yash2006kr/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="https://twitter.com/yash2006kr/" target="_blank">
-    <img src="https://img.shields.io/badge/X-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="X (Twitter)" />
-  </a>
-  <a href="https://instagram.com/yash2006kr/" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
-  </a>
-  <a href="mailto:yash2006kr@outlook.com]" target="_blank">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-</div>
 
 ## ✨ Features
 
-- 🎭 **Dark / Light Mode Toggle** (custom theme switcher)  
+- 🎭 **Dark / Light Mode Toggle** (custom theme switcher) - Don't know why I'm not removing it though it doesn't work 
 - 🧑‍🚀 **About Me** section – my background & interests  
 - 📚 **Blog Section** – interactive posts like:  
   - 🧩 Maze Game (playable in browser)  
   - 🎮 Terminal Games Collection (download & play Python games)  
   - 👾 Pacman Game (web based)
+  - and many more...
 - ⛅ **Weather Button** – quick link to [Zoom Earth](https://zoom.earth) for live weather updates  
 - 📄 **Resume Download** - 📬 **Contact Section** – email + GitHub + socials  
 
@@ -139,4 +121,5 @@ NOTE : "This website is completely built using AI"
 
 1. Clone this repository:
    ```bash
-   git clone [https://github.com/yash2006kr/yashwanthkr.github.io.git](https://github.com/yash2006kr/yashwanthkr.github.io.git)
+   git clone https://github.com/yash2006kr/yashwanthkr
+NOTE : "This website is completely built using AI"
